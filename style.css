@@ -1,33 +1,37 @@
 
-body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
+  html,body
+  {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+  }
+  
 
-#myVideo {
-    position: fixed;
-    bottom: 0;
+#myVideo, .vid {
+    position: absolute;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-  }
+    bottom: 0;
+    overflow: hidden;
+
+}
 
 #header
 {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(img/video.mp4);
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img/website.mp4);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    z-index: -1;
+    position: abosolute;
+    overflow-x: hidden;
 }
+
 .user-box
 {
     top: 50%;
@@ -53,7 +57,8 @@ body
 
 .user-box p
 { 
-    color: #fff
+    color: #fff;
+    
 }
 
 .scroll-btn
@@ -93,7 +98,8 @@ body
     padding-bottom: 50px;
     background: #fff;
     bottom: 0px;
-    left: 0px;
+    overflow-x: hidden; 
+    padding-right: 50px;
 
 }
 
@@ -205,152 +211,6 @@ body
       height: 20px;
       z-index: 3;
 }
-
-/*projects*/
-
-.project
-{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #060c21;
-    grid-gap:0 50px; 
-    padding-left: 70px;
-    padding-right: 70px;
-}
-
-.container1{
-    position: relative;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-template-rows: auto;
-    z-index: 1;
-    
-
-}
-.container1 .box 
-{
-    position:relative;
-    height: 400px;
-    width: 270px;
-    background: #060c21;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000;
-   
-
-}
-
-.container1  .box::before
-{
-    content: '';
-    position: absolute; 
-    background: #fff;
-    top: -2px;
-    bottom: -2px;
-    right: -2px;
-    left: -2px;
-    transform: skew(2deg,2deg);
-    z-index: 0;
-   
-}
-
-.container1 .box:nth-child(1):before
-{
-    background: linear-gradient(315deg, #ff0057 ,#e64a19);
-
-}
-.container1 .box:nth-child(2):before
-{
-    background: linear-gradient(315deg, #89ff00 ,#00bcd4);
-
-}
-.container1 .box:nth-child(3):before
-{
-    background: linear- gradient(315deg, #e91e63 , #5d02ff); 
-
-}
-.container1 box:nth-child(4):before
-{
-    background: linear- gradient(315deg, #ff0000 ,#ffc107);
-
-}
-
-.content
-{
-    position: relative;
-    padding: 20px;
-}
-
-.content h2
-{
-    position: absolute;
-     top: -60px;
-    right: 20px;
-    margin: 0;
-    padding: 0;
-    font-size: 10em;
-    color:rgba(255,255,255,.05);
-    transition: 0.5s;
-      
-}
-
-.box:hover .content h2
-{
-    top: -140px;
-}
-
-.box .content h3
-{
-    margin: 0 0 10px;
-    padding: 0;
-    font-size: 24px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.box .content p
-{
-    margin: 0 0 10px;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.box .content a
-{
-    position: relative;
-    margin: 20px 0 0;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 1px solid #fff;
-    display: inline-block;
-    color: #fff;
-    transition: 0.5s;
-    transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
-}
-
-.box:hover .content a
-{
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-}
-
-.box .content a:hover
-{
-    color: #000;
-    background: #fff;
-}
-
 /*----Projects 2----*/
 .project2
 {
@@ -583,6 +443,7 @@ transition: 0.5s ease-in-out;
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
+    overflow: hidden;
 }
 
 .contact .row
